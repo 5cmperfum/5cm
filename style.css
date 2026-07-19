@@ -1,140 +1,43 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-    background: #0a0a1a; /* Fondo oscuro como la foto */
-    color: white;
-    text-align: center;
 }
 
+body {
+    background: #FFFDF5; /* beige crema de toda la página */
+    color: #1a1a1a;
+}
+
+/* PORTADA */
 .hero {
-    height: 100vh; /* Que ocupe toda la pantalla */
+    background: #FFFDF5;
+    color: #1a1a1a;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     padding: 20px;
 }
 
 .foto-perfil {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* La deja circular */
-    border: 3px solid #00aaff;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #D4AF37; /* borde dorado */
     margin-bottom: 20px;
+    object-fit: cover;
 }
 
 .hero h1 {
     font-size: 3em;
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
 
 .hero h1 span {
-    color: #00aaff; /* El color azul de "Adam" */
+    color: #D4AF37; /* dorado para 5cmperfum */
 }
 
-.hero h2 {
-    font-size: 1.5em;
-    color: #aaa;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    max-width: 600px;
-    color: #ccc;
-    line-height: 1.6;
-}
-
-.botones {
-    margin-top: 30px;
-}
-
-.btn {
-    padding: 12px 25px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 10px;
-    transition: 0.3s;
-}
-
-.btn-azul {
-    background: #0077ff;
-    color: white;
-}
-
-.btn-azul:hover {
-    background: #0055cc;
-}
-
-.btn-transparente {
-    border: 2px solid #555;
-    color: white;
-}
-
-.btn-transparente:hover {
-    background: #555;
-}
-
-.productos {
-    padding: 60px 20px;
-    background: #111;
-}
-
-.productos h2 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #00aaff;
-}
-
-.grid-productos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-    max-width: 900px;
-    margin: 0 auto 40px auto;
-}
-
-.producto {
-    background: #1a1a2e;
-    padding: 15px;
-    border-radius: 15px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.producto:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #00aaff;
-}
-
-.producto img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.precio {
-    font-size: 1.6em;
-    color: #00aaff;
-    font-weight: bold;
-    margin-top: 15px;
-}
-
-.boton-ig {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.btn-ig {
-    display: inline-block;
-    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF);
-    color: white;
-    padding: 14px 30px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
-}
