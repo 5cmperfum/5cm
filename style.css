@@ -3,18 +3,18 @@
 body { 
     background: #FFFDF5; 
     color: #1a1a1a;
-    font-family: 'Montserrat', sans-serif; /* Texto normal */
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* LOGO 5CM CON KAUSHAN */
+/* LOGO */
 .logo {
     font-family: 'Kaushan Script', cursive !important;
     font-size: 2.2em;
     letter-spacing: 2px;
-    color: #D4AF37; /* dorado */
+    color: #D4AF37;
 }
 
-/* TITULOS CON PLAYFAIR */
+/* TITULOS */
 h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
     font-weight: 800;
@@ -22,32 +22,47 @@ h1, h2, h3, h4 {
 
 /* NAVBAR */
 .navbar {
-    display: flex !important;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
     background: #FFFDF5;
-    flex-wrap: wrap;
+    position: absolute; /* Para que quede encima del banner */
+    width: 100%;
+    z-index: 10;
 }
 .navbar nav a { margin: 0 15px; text-decoration: none; color: #1a1a1a; font-weight: 500; }
 .navbar nav a:hover { color: #D4AF37; }
 
-/* HERO */
-.hero2 {
-    display: flex !important;
+/* BANNER CON IMAGEN DE FONDO */
+.banner {
+    height: 550px; /* Alto del banner */
+    background-image: url('/5cm/images/5ml.jpg'); /* TU FOTO AQUÍ */
+    background-size: cover;
+    background-position: center;
+    display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 60px;
-    background: #FFFDF5;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
 }
-.hero-texto h2 { font-size: 3.5em; line-height: 1.2; }
-.hero-texto p { margin: 15px 0 25px 0; font-size: 1.1em; }
-.hero-imagen img { 
-    width: 400px; 
-    max-width: 100%; 
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+/* Capa oscura encima de la foto para que se lea el texto */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
 }
+
+.banner-texto {
+    position: relative; /* Para que quede encima de la capa oscura */
+    z-index: 2;
+    padding: 20px;
+}
+.banner-texto h2 { font-size: 3.5em; line-height: 1.2; color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.7); }
+.banner-texto p { margin: 15px 0 25px 0; font-size: 1.2em; color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.7); }
 
 /* BOTON */
 .btn { 
@@ -66,7 +81,7 @@ h1, h2, h3, h4 {
 .categorias { padding: 60px 20px; }
 .categorias h3 { font-size: 2em; margin-bottom: 30px; text-align: center; }
 .grid-categorias {
-    display: grid !important;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     max-width: 600px;
@@ -88,41 +103,10 @@ h1, h2, h3, h4 {
 /* FOOTER */
 footer { text-align: center; padding: 30px; background: #eee; font-size: 0.9em; }
 
-/* RESPONSIVE PARA CELULAR */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column !important;
-        padding: 15px 20px !important;
-        gap: 10px !important;
-    }
-    .navbar nav {
-        display: flex !important;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .navbar nav a {
-        margin: 5px 8px !important;
-        font-size: 0.9em !important;
-    }
-
-    .hero2 {
-        flex-direction: column !important;
-        padding: 40px 20px !important;
-        text-align: center !important;
-    }
-    .hero-texto h2 {
-        font-size: 2.5em !important;
-    }
-    .hero-imagen img {
-        width: 80% !important;
-        margin-top: 20px !important;
-    }
-
-    .grid-categorias {
-        grid-template-columns: 1fr !important;
-        max-width: 350px !important;
-    }
-    .categoria img {
-        height: 200px !important;
-    }
-}
+    .navbar { flex-direction: column; padding: 15px 20px; gap: 10px; }
+    .banner { height: 400px; }
+    .banner-texto h2 { font-size: 2.5em; }
+    .grid-categorias { grid-template-columns: 1fr; max-width: 350px; }
+}}
