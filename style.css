@@ -1,43 +1,48 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
 
-body {
-    background: #FFFDF5; /* beige crema de toda la página */
-    color: #1a1a1a;
-}
+body { background: #FFFDF5; color: #1a1a1a; }
 
-/* PORTADA */
-.hero {
-    background: #FFFDF5;
-    color: #1a1a1a;
-    min-height: 100vh;
+/* NAVBAR */
+.navbar {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
+    padding: 20px 60px;
+    background: #FFFDF5;
 }
+.logo { font-size: 1.8em; font-style: italic; }
+.navbar nav a { margin: 0 15px; text-decoration: none; color: #1a1a1a; }
+.buscador { padding: 8px 15px; border-radius: 20px; border: 1px solid #ccc; }
 
-.foto-perfil {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 4px solid #D4AF37; /* borde dorado */
-    margin-bottom: 20px;
+/* HERO */
+.hero2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    background: #FFFDF5;
+}
+.hero-texto h2 { font-size: 3.5em; line-height: 1.2; }
+.hero-imagen img { width: 400px; border-radius: 20px; }
+
+/* CATEGORIAS */
+.categorias { padding: 60px; }
+.categorias h3 { font-size: 2em; margin-bottom: 30px; }
+.grid-categorias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 600px;
+}
+.categoria { text-align: center; }
+.categoria img {
+    width: 100%;
+    height: 250px;
     object-fit: cover;
+    border-radius: 15px;
+    background: #eee;
 }
+.categoria h4 { margin-top: 10px; font-size: 1.3em; }
 
-.hero h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.hero h1 span {
-    color: #D4AF37; /* dorado para 5cmperfum */
-}
-
+/* FOOTER */
+footer { text-align: center; padding: 30px; background: #eee; }
