@@ -1,42 +1,79 @@
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-body { background: #FFFDF5; color: #1a1a1a; }
+body { 
+    background: #FFFDF5; 
+    color: #1a1a1a;
+    font-family: 'Montserrat', sans-serif; /* Texto normal */
+}
+
+/* LOGO 5CM CON KAUSHAN */
+.logo {
+    font-family: 'Kaushan Script', cursive !important;
+    font-size: 2.2em;
+    letter-spacing: 2px;
+    color: #D4AF37; /* dorado */
+}
+
+/* TITULOS CON PLAYFAIR */
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+}
 
 /* NAVBAR */
 .navbar {
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
     background: #FFFDF5;
+    flex-wrap: wrap;
 }
-.logo { font-size: 1.8em; font-style: italic; }
 .navbar nav a { margin: 0 15px; text-decoration: none; color: #1a1a1a; font-weight: 500; }
 .navbar nav a:hover { color: #D4AF37; }
-.buscador { padding: 8px 15px; border-radius: 20px; border: 1px solid #ccc; }
 
 /* HERO */
 .hero2 {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: space-between;
     padding: 60px;
     background: #FFFDF5;
 }
-.hero-texto h2 { font-size: 3.5em; line-height: 1.2; font-weight: 800; }
-.hero-imagen img { width: 400px; border-radius: 20px; }
+.hero-texto h2 { font-size: 3.5em; line-height: 1.2; }
+.hero-texto p { margin: 15px 0 25px 0; font-size: 1.1em; }
+.hero-imagen img { 
+    width: 400px; 
+    max-width: 100%; 
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* BOTON */
+.btn { 
+    padding: 14px 30px; 
+    border-radius: 25px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    background: #D4AF37; 
+    color: #1a1a1a; 
+    display: inline-block;
+    transition: 0.3s;
+}
+.btn:hover { background: #c09b2c; transform: scale(1.05); }
 
 /* CATEGORIAS */
-.categorias { padding: 60px; }
+.categorias { padding: 60px 20px; }
 .categorias h3 { font-size: 2em; margin-bottom: 30px; text-align: center; }
 .grid-categorias {
-    display: grid;
+    display: grid !important;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     max-width: 600px;
     margin: 0 auto;
 }
 .categoria { text-align: center; }
+.categoria a { text-decoration: none; color: #1a1a1a; }
 .categoria img {
     width: 100%;
     height: 250px;
@@ -49,77 +86,43 @@ body { background: #FFFDF5; color: #1a1a1a; }
 .categoria h4 { margin-top: 10px; font-size: 1.3em; }
 
 /* FOOTER */
-footer { text-align: center; padding: 30px; background: #eee; }
-
-/* PRODUCTOS - PARA DESPUES */
-.grid-productos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-    max-width: 900px;
-    margin: 0 auto 40px auto;
-}
-.producto {
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 15px;
-    text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-.producto:hover { transform: scale(1.05); box-shadow: 0 0 20px #D4AF37; }
-.producto img { width: 100%; height: 280px; object-fit: cover; border-radius: 10px; }
-.precio { font-size: 1.6em; color: #D4AF37; font-weight: bold; margin-top: 15px; }
-.btn { padding: 14px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; background: #D4AF37; color: #1a1a1a; display: inline-block; }
+footer { text-align: center; padding: 30px; background: #eee; font-size: 0.9em; }
 
 /* RESPONSIVE PARA CELULAR */
 @media (max-width: 768px) {
-    
-    /* MENU */
     .navbar {
-        flex-direction: column;
-        padding: 15px 20px;
-        gap: 10px;
+        flex-direction: column !important;
+        padding: 15px 20px !important;
+        gap: 10px !important;
     }
     .navbar nav {
-        display: flex;
+        display: flex !important;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
     }
     .navbar nav a {
-        margin: 0 8px;
-        font-size: 0.9em;
-    }
-    .buscador {
-        width: 90%;
-        margin-top: 10px;
+        margin: 5px 8px !important;
+        font-size: 0.9em !important;
     }
 
-    /* PORTADA */
     .hero2 {
-        flex-direction: column;
-        padding: 40px 20px;
-        text-align: center;
+        flex-direction: column !important;
+        padding: 40px 20px !important;
+        text-align: center !important;
     }
     .hero-texto h2 {
-        font-size: 2.5em;
+        font-size: 2.5em !important;
     }
     .hero-imagen img {
-        width: 80%;
-        margin-top: 20px;
+        width: 80% !important;
+        margin-top: 20px !important;
     }
 
-    /* CATEGORIAS */
-    .categorias {
-        padding: 40px 20px;
-    }
     .grid-categorias {
-        grid-template-columns: 1fr; /* 1 columna en vez de 2 */
-        max-width: 350px;
-        margin: 0 auto;
+        grid-template-columns: 1fr !important;
+        max-width: 350px !important;
     }
     .categoria img {
-        height: 200px;
+        height: 200px !important;
     }
 }
