@@ -3,55 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5cmperfum - Perfumes</title>
-    <link rel="stylesheet" href="style.css?v=1">
+    <title>5cmperfum</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="hero">
-        <img src="images/logo.jpg" alt="Logo 5cmperfum" class="foto-perfil">
-        
-        <h1>Somos <span>5cmperfum</span></h1>
-        <h2>A tu disposición</h2>
-        
-        <p>Perfumes originales y fragancias únicas para cada ocasión.
-        Calidad, elegancia y estilo en cada aroma.</p>
-        
-        <div class="botones">
-            <a href="#productos" class="btn btn-azul">Ver Productos</a>
-            <a href="#contacto" class="btn btn-transparente">Contáctanos</a>
+
+    <!-- MENU ARRIBA -->
+    <header class="navbar">
+        <h1 class="logo">5cmperfum</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#categorias">Categorías</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <input type="text" placeholder="Search" class="buscador">
+    </header>
+
+    <!-- PORTADA GRANDE -->
+    <section class="hero2">
+        <div class="hero-texto">
+            <h2>Descubre<br>Tu Esencia</h2>
+        </div>
+        <div class="hero-imagen">
+            <img src="images/portada.jpg" alt="Perfume">
         </div>
     </section>
-    <section id="productos" class="productos">
-    <h2>Nuestros Perfumes</h2>
-    
-    <div class="grid-productos">
-        
-        <div class="producto">
-            <a href="producto1.html">
-                <img src="images/perfume1.jpg" alt="Perfume 1">
-            </a>
-            <p class="precio">$25.990</p>
+
+    <!-- CATEGORIAS -->
+    <section id="categorias" class="categorias">
+        <h3>Compra por Categoría</h3>
+        <div class="grid-categorias">
+            
+            <div class="categoria">
+                <a href="hombre.html">
+                    <img src="images/hombre.jpg" alt="Hombre">
+                </a>
+                <h4>Hombre</h4>
+            </div>
+
+            <div class="categoria">
+                <a href="mujer.html">
+                    <img src="images/mujer.jpg" alt="Mujer">
+                </a>
+                <h4>Mujer</h4>
+            </div>
+
         </div>
-
-        <div class="producto">
-            <a href="producto2.html">
-                <img src="images/perfume2.jpg" alt="Perfume 2">
-            </a>
-            <p class="precio">$29.990</p>
-        </div>
-
-        <div class="producto">
-            <a href="producto3.html">
-                <img src="images/perfume3.jpg" alt="Perfume 3">
-            </a>
-            <p class="precio">$34.990</p>
-        </div>
-
-    </div>
-
-    <div class="boton-ig">
-        <a href="https://instagram.com/5cmperfum" target="_blank" class="btn-ig">Síguenos en Instagram</a>
-    </div>
     </section>
+
+    <!-- FOOTER SIMPLE -->
+    <footer id="contacto">
+        <p>© 2026 5cmperfum. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 </html>
