@@ -42,3 +42,81 @@ footer {
     background: #2c3e50;
     color: white;
 }
+
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #0a0a1a; /* Fondo oscuro como la foto */
+    color: white;
+    text-align: center;
+}
+
+.hero {
+    height: 100vh; /* Que ocupe toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* La deja circular */
+    border: 3px solid #00aaff;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 10px 0;
+}
+
+.hero h1 span {
+    color: #00aaff; /* El color azul de "Adam" */
+}
+
+.hero h2 {
+    font-size: 1.5em;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 600px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.botones {
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.btn-azul {
+    background: #0077ff;
+    color: white;
+}
+
+.btn-azul:hover {
+    background: #0055cc;
+}
+
+.btn-transparente {
+    border: 2px solid #555;
+    color: white;
+}
+
+.btn-transparente:hover {
+    background: #555;
+}
